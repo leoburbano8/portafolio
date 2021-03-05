@@ -1,12 +1,20 @@
 :root{
   --p-white: #FFF; 
   --p-dark: rgb(255,255,255,0);
+  --p-red: #ef4035; 
+  --p-hover-red: #f33501;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 body{
-  font-family: "Roboto Condensed" sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/******************************************** NAV-BAR *********************************************/
+
+nav {
+  z-index: 2;
 }
 
 .logo{
@@ -37,3 +45,88 @@ nav ul li {
   border-top: 0.1875rem solid var(--p-white);
 }
 
+.navbar-brand{
+  max-width: 17.25rem;
+  height: 4rem !important;
+}
+
+@media(max-width: 768px){
+  .navbar-brand{
+    width: 3rem;
+    height: 3.5rem;
+  }
+}
+
+
+/******************************************** HEADER *********************************************/
+.header-wraper{
+  position: relative;
+  background: url(fondo.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto Condesed', sans-serif;
+  z-index: 1;
+}
+
+.main-info h1{
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.typed-text{
+  font-size: 2rem;
+  color: var(--p-white);
+}
+
+@media(max-width: 768px){
+  .main-info h1{
+    font-size: 1.7rem !important;
+  }
+  .typed-text{
+    font-size: 1.3rem;
+  }
+}
+
+.btn-main{
+  border: 1px solid var(--p-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--p-white);
+  margin: 2rem;
+  background-color: var(--p-red);
+}
+
+.btn-main:hover {
+  text-decoration: none;
+  background-color: var(--p-hover-red);
+  color: black;
+  transition: .2s ease-in-out;
+}
+
+.tsparticles-canvas-el{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media(max-width: 768px){
+  .particles-canvas{
+    display: none;
+  }
+}
