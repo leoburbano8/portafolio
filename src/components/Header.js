@@ -1,9 +1,10 @@
 import React from 'react';
 import Typed from 'react-typed';
+import { Link } from 'react-scroll';
 
 function Header() {
     return (
-        <div className="header-wraper">
+        <div id='home' className="header-wraper">
             <div className="main-info">
                 <h1>Desarrollo Web</h1>
                 <Typed
@@ -13,7 +14,7 @@ function Header() {
                     backSpeed={60}
                     loop
                 />
-                <a href="#" className="btn-main">Contáctanos</a>
+                <Link smooth={true} to='contacto' offset={-110}  className="btn-main">Contacto</Link>
             </div>
         </div>
     )
